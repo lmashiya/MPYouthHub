@@ -6,6 +6,9 @@
 
 <h2>Medicine Delivery</h2>
 
+<h2><span style="color: green">“Everybody can be great. Because anybody can serve. You don’t have to have a college degree to serve."</span> </h2>
+<h3> List of Clinics in Your Area</h3>
+<br/>
 <table id="clinicTable" class="table table-hover table-bordered">
     <thead>
         <tr>
@@ -24,7 +27,7 @@
 @section scripts
 {
     <script>
-        var data = [
+        var clinicData = [
             {
                 "name": "Embalenhle Clinic",
                 "contactDetails" : "017 685 4089",
@@ -57,13 +60,13 @@
 
         $(document).ready(function () {
             var table = $("#clinicTable").DataTable({
-                data: data,
+                data: clinicData,
                             columns: [
                                 {
-                                    data: "name"
-                                    //render: function (data, type, movie) {
-                                    //    return "<a href='/api/movies/edit/" + movie.id + "'>" + movie.name + "</a>";
-                                    //}
+                                    data: "name",
+                                    render: function (data) {
+                                        return "<a href='/Volunteer/GoToPatients'>" + data + "</a>";
+                                    }
                                 }, {
                                     data: "address"
                                 }, {

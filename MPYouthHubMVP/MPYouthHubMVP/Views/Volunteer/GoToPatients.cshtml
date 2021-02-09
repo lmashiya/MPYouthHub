@@ -1,0 +1,83 @@
+﻿
+@{
+    ViewBag.Title = "GoToPatients";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Patients List</h2>
+<h2>Choose patient/s :</h2>
+
+<table id="patientTable" class="table table-hover table-bordered">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Contact Details</th>
+        <th>Accept</th>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+
+</table>
+<div style="text-align: center">
+    <button class="btn-success btn-lg"><a href=@Url.Action("Index")>Done</a></button>
+</div>
+
+@section scripts
+{
+    <script>
+        var clinicData = [
+            {
+                "name": "Mary Shabangu",
+                "contactDetails": "017 685 4089",
+                "address": " 2205 Extension Four Dr, Embalenhle, 0700",
+                "acceptPatient": "Accept"
+            },
+            {
+                "name": "John Wick",
+                "contactDetails": "10111",
+                "address": " 2234 Extension Five Dr, Embalenhle, 0700",
+                "acceptPatient": "Accept"
+            }
+        ];
+
+        $(document).ready(function() {
+            var table = $("#patientTable").DataTable({
+                data: clinicData,
+                columns: [
+                    {
+                        data: "name",
+                        render: function(data) {
+                            return "<a href='/Volunteer/GoToPatients'>" + data + "</a>";
+                        }
+                    },
+                    {
+                        data: "address"
+                    },
+                    {
+                        data: "contactDetails"
+                        //render: function (data) {
+                        //    return "<button class='btn-link js-delete' data-movie-id=" + data + ">Delete</button>";
+                        //}
+                    }, {
+                        data: "acceptPatient",
+                        render: function(data) {
+                            return "<button class='btn-link btn-success js-accept'  " + ">Accept</button>";
+                        }
+                    }
+                ]
+            });
+        });
+
+        $("#patientTable").on("click",
+            ".js-accept",
+            function() {
+                var button = $(this);
+                if (confirm("Thank You are you sure u will make the delivery ?")) {
+                    return button.parents("tr").remove();
+                };
+        });
+    </script>
+}
+

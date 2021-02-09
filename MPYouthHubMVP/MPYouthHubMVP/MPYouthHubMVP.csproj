@@ -304,10 +304,9 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Images\culture.jpg" />
-    <Content Include="Images\elephant.jpg" />
     <Content Include="Images\logoforYouthHub.png" />
-    <Content Include="Images\person and beauaty.jpg" />
+    <Content Include="Scripts\bootbox.js" />
+    <Content Include="Scripts\bootbox.min.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -527,6 +526,7 @@
     <Content Include="Views\Home\Volunteer.cshtml" />
     <Content Include="Views\Volunteer\Index.cshtml" />
     <Content Include="Views\Volunteer\MedicineDeliveryView.cshtml" />
+    <Content Include="Views\Volunteer\GoToPatients.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

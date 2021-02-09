@@ -6,10 +6,13 @@
 
 <h2>"Volunteers do not necessarily have the time; they just have the heart."</h2>
 <br />
+<h2>"Volunteers do not necessarily have the time; they just have the heart."</h2>
+<br />
 <p>We currently have have  <span style="color: green;font-size: xx-large"> @Model.Count</span>  opportunities for you to volunteer</p>
 
 @foreach (var option in @Model)
-{   <br/>
+{
+    <br />
     @Html.ActionLink(option.OptionName, "GoToLink", "", new { @class = "btn btn-primary" })
-    <br/>
+    <br />
 }

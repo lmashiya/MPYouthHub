@@ -48,6 +48,11 @@ namespace MPYouthHubMVP.Controllers
             return View("MedicineDeliveryView",clinics);
         }
 
+        public ActionResult GoToPatients()
+        {
+            return View("GoToPatients");
+        }
+
         private IEnumerable<Clinic> GetClinics()
         {
             var clinics = new List<Clinic>()
