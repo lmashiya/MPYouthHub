@@ -15,7 +15,7 @@ namespace MPYouthHubMVP.Controllers
 
         public ActionResult GoToVolunteer()
         {
-            throw new NotImplementedException();
+            return RedirectToAction("Index","Volunteer");
         }
 
         public ActionResult GoToSkills()

@@ -1,0 +1,15 @@
+﻿@model List<MPYouthHubMVP.Models.VolunteerOption>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>“Volunteers do not necessarily have the time; they just have the heart.</h2>
+<br />
+<p>We currently have have @Model.Count opportunities for you to volunteer</p>
+
+@foreach (var option in @Model)
+{   <br/>
+    @Html.ActionLink(option.OptionName, "GoToLink", "", new { @class = "btn btn-primary" })
+    <br/>
+}
