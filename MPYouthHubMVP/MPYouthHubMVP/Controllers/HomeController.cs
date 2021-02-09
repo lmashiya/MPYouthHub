@@ -13,18 +13,44 @@ namespace MPYouthHubMVP.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult GoToVolunteer()
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
+            throw new NotImplementedException();
         }
 
-        public ActionResult Contact()
+        public ActionResult GoToSkills()
         {
-            ViewBag.Message = "Your contact page.";
+            throw new NotImplementedException();
+        }
 
-            return View();
+        public ActionResult GoToCommunicate()
+        {
+            throw new NotImplementedException();
+        }
+
+        public ActionResult GoToPropose()
+        {
+            throw new NotImplementedException();
+        }
+
+        public ActionResult GoToMentor()
+        {
+            throw new NotImplementedException();
+        }
+
+        public ActionResult GoToWater()
+        {
+            throw new NotImplementedException();
+        }
+
+        public ActionResult GoToBuild()
+        {
+            throw new NotImplementedException();
+        }
+
+        public ActionResult GoToShare()
+        {
+            throw new NotImplementedException();
         }
     }
 }
