@@ -20,7 +20,7 @@ namespace MPYouthHubMVP.Controllers
 
         public ActionResult GoToSkills()
         {
-            throw new NotImplementedException();
+            return RedirectToAction("Index","Skills");
         }
 
         public ActionResult GoToCommunicate()
