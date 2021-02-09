@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<MPYouthHubMVP.Models.Clinic>
 @{
     ViewBag.Title = "MedicineDeliveryView";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -6,5 +6,85 @@
 
 <h2>Medicine Delivery</h2>
 
+<table id="clinicTable" class="table table-hover table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Operating Times</th>
+            <th>Contact Details</th>
+            <th>Number of Packages</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
 
+</table>
+
+@section scripts
+{
+    <script>
+        var data = [
+            {
+                "name": "Embalenhle Clinic",
+                "contactDetails" : "017 685 4089",
+                "address" : " 2285 Extension Four Dr, Embalenhle, 0700",
+                "numberOfPackages" : 50,
+                'operatingTimes' : "8am–8pm"
+            },
+            {
+                "name": "Embalenhle Clinic",
+                "contactDetails" : "017 685 4089",
+                "address" : " 2285 Extension Four Dr, Embalenhle, 0700",
+                "numberOfPackages" : 50,
+                "operatingTimes" : "8am–8pm"
+            },
+            {
+                "name": "Embalenhle Clinic",
+                "contactDetails": "017 685 4089",
+                "address": " 2285 Extension Four Dr, Embalenhle, 0700",
+                "numberOfPackages": 50,
+                "operatingTimes": "8am–8pm"
+            },
+            {
+                "name": "Embalenhle Clinic",
+                "contactDetails": "017 685 4089",
+                "address": " 2285 Extension Four Dr, Embalenhle, 0700",
+                "numberOfPackages": 50,
+                "operatingTimes": "8am–8pm"
+            }
+        ];
+
+        $(document).ready(function () {
+            var table = $("#clinicTable").DataTable({
+                data: data,
+                            columns: [
+                                {
+                                    data: "name"
+                                    //render: function (data, type, movie) {
+                                    //    return "<a href='/api/movies/edit/" + movie.id + "'>" + movie.name + "</a>";
+                                    //}
+                                }, {
+                                    data: "address"
+                                }, {
+                                    data: "operatingTimes",
+                                    //render: function (data) {
+                                    //    return "<button class='btn-link js-delete' data-movie-id=" + data + ">Delete</button>";
+                                    //}
+                                }, {
+                                    data: "contactDetails",
+                                    //render: function (data) {
+                                    //    return "<button class='btn-link js-delete' data-movie-id=" + data + ">Delete</button>";
+                                    //}
+                                }, {
+                                    data: "numberOfPackages",
+                                    //render: function (data) {
+                                    //    return "<button class='btn-link js-delete' data-movie-id=" + data + ">Delete</button>";
+                                    //}
+                                }
+                            ]
+                    });
+        });
+    </script>
+}
 

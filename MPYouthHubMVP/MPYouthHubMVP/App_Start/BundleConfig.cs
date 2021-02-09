@@ -10,7 +10,6 @@ namespace MPYouthHubMVP
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js",
-                        "~/Scripts/jquery.jcarousel.js",
                         "~/scripts/datatables/jquery.datatables.js",
                         "~/scripts/dataTables/datatables.bootstrap.js"));
 

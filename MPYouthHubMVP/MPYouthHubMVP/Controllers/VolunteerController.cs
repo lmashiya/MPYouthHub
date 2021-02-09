@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Script.Serialization;
 using MPYouthHubMVP.Models;
+using Newtonsoft.Json;
 
 namespace MPYouthHubMVP.Controllers
 {
@@ -42,7 +44,56 @@ namespace MPYouthHubMVP.Controllers
 
         public ActionResult GoToLink()
         {
-            return View("MedicineDeliveryView");
+            var clinics = GetClinics();  
+            return View("MedicineDeliveryView",clinics);
+        }
+
+        private IEnumerable<Clinic> GetClinics()
+        {
+            var clinics = new List<Clinic>()
+            {
+                new Clinic()
+                {
+                    Name = "Embalenhle Clinic",
+                    ContactDetails = "017 685 4089",
+                    Address = " 2285 Extension Four Dr, Embalenhle, 0700",
+                    NumberOfPackages = 50,
+                    OperatingTimes = "8am–8pm"
+                },
+                new Clinic()
+                {
+                    Name = "Embalenhle Clinic",
+                    ContactDetails = "017 685 4089",
+                    Address = " 2285 Extension Four Dr, Embalenhle, 0700",
+                    NumberOfPackages = 50,
+                    OperatingTimes = "8am–8pm"
+                },
+                new Clinic()
+                {
+                    Name = "Embalenhle Clinic",
+                    ContactDetails = "017 685 4089",
+                    Address = " 2285 Extension Four Dr, Embalenhle, 0700",
+                    NumberOfPackages = 50,
+                    OperatingTimes = "8am–8pm"
+                },
+                new Clinic()
+                {
+                    Name = "Embalenhle Clinic",
+                    ContactDetails = "017 685 4089",
+                    Address = " 2285 Extension Four Dr, Embalenhle, 0700",
+                    NumberOfPackages = 50,
+                    OperatingTimes = "8am–8pm"
+                }, new Clinic()
+                {
+                    Name = "Embalenhle Clinic",
+                    ContactDetails = "017 685 4089",
+                    Address = " 2285 Extension Four Dr, Embalenhle, 0700",
+                    NumberOfPackages = 50,
+                    OperatingTimes = "8am–8pm"
+                },
+
+            };
+            return clinics;
         }
     }
 }
