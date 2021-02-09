@@ -1,0 +1,581 @@
+﻿html {
+    height: 100%;
+    min-height: 100% !important;
+    width: 100%;
+    min-width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+	height: 100%;
+	min-height: 100% !important;
+	width: 100%;
+	min-width: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: 0px;
+	padding: 0px;
+}
+
+a.highlight {
+	background-color:lawngreen;
+	padding:5px;
+	border:white 2px solid;
+	color: orangered;
+}
+
+h2 {
+	color:orange;
+}
+
+.beef {
+    height: 100%;
+    min-height: 100% !important;
+    width: 100%;
+    min-width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(Images/yoshi1.jpg);
+}
+
+.burger {
+    height: 100%;
+    min-height: 100% !important;
+    width: 100%;
+    min-width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(Images/yoshi2.jpg);
+}
+
+.dessert {
+    height: 100%;
+    min-height: 100% !important;
+    width: 100%;
+    min-width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(Images/yoshi3.png);
+}
+
+.sandwich {
+    height: 100%;
+    min-height: 100% !important;
+    width: 100%;
+    min-width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(Images/yoshi4.jpg);
+}
+
+.pasta {
+    height: 100%;
+    min-height: 100% !important;
+    width: 100%;
+    min-width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(Images/yoshi5.jpg);
+}
+
+.salmon {
+    height: 100%;
+    min-height: 100% !important;
+    width: 100%;
+    min-width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(Images/salmon.jpg);
+}
+
+
+
+#background1 {
+    height: 100%;
+    min-height: 100% !important;
+    width: 100%;
+    min-width: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+    background-color: transparent;
+}
+
+#background2 {
+    height: 100%;
+    min-height: 100% !important;
+    width: 100%;
+    min-width: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+    background-color: transparent;
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+@-webkit-keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.fade-in {
+    height: 100%;
+    min-height: 100% !important;
+    width: 100%;
+    min-width: 100%;
+    opacity: 0; /* make things invisible upon start */
+    -webkit-animation: fadeIn ease-in 1; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation: fadeIn ease-in 1;
+    animation: fadeIn ease-in 1;
+    -webkit-animation-fill-mode: forwards; /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-duration: 2.5s;
+    -moz-animation-duration: 2.5s;
+    animation-duration: 2.5s;
+}
+
+fade-out {
+    height: 100%;
+    min-height: 100% !important;
+    width: 100%;
+    min-width: 100%;
+    opacity: 1; /* make things invisible upon start */
+    -webkit-animation: fadeIn ease-in 1; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation: fadeIn ease-in 1;
+    animation: fadeIn ease-in 1;
+    -webkit-animation-fill-mode: forwards; /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-duration: 2.5s;
+    -moz-animation-duration: 2.5s;
+    animation-duration: 2.5s;
+}
+
+
+#login {
+    width: 30%;
+    background-color:  rgba(140, 12, 194, 0.2);
+    border-radius: 15px;
+    padding-bottom: 15px;
+    box-shadow: 0px 0px 2px 0.5px black;
+    position: fixed;
+    left: 35%;
+    top: 30%;
+    z-index: 3;
+}
+
+    #login h2 {
+    margin:0px;
+    }
+
+
+#logintop {
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    text-align: center;
+    color: #FF8830;
+    border-bottom: 1px solid black;
+    margin-bottom: 15px;
+    background-color: rgba(255,255,255, 0.6);
+    background-image: url(Images/RR.png);
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: 50% 90%;
+    padding: 9%;
+    height: 100%;
+    text-align: left;
+}
+
+#loginbody {
+    padding: 10px;
+    font-weight: bold;
+    height: 100%;
+    padding-bottom: 20px;
+    width: 80%;
+    margin: auto;
+
+}
+
+    #loginbody button {
+        font-weight: bold;
+        float: right;
+        background-color: #F42EC2 ;
+        border: none;
+        box-shadow: 0px 0px 2px 0.5px black;
+
+    }
+
+        #loginbody button:hover {
+            float: right;
+            background-color: #F42EC2;
+            box-shadow: 0px 0px 2px 0.5px #F42EC2;
+        }
+
+    #loginbody input {
+        width: 100%;
+        margin: auto;
+        box-shadow: 0px 0px 2px 0.5px black;
+    }
+
+h1 {
+    text-align: center;
+    color: #FF8830 !important;
+
+}
+
+.menucontainer {
+    /*margin-top: 100px;*/
+    height: 10%;
+    margin-right: 5px;
+    width: 55%;
+    float: left;
+    margin-left: 280px;
+}
+
+.weekcontainer{
+    height: 250px;
+}
+
+.weekcontainer h2{
+    margin:auto;
+    /*width: 70%;*/
+}
+
+.menutype{
+    margin: auto;
+    margin-top: 5px;
+    width: 100%;
+    transition: ease-in-out 0.5s;
+    /*background-color: lightgray;*/
+    float: none;
+}
+
+.menuitemold {
+    border: 1px solid #FF8830;
+    margin: 0.1%;
+    width: 19.8%;
+    height: 200px;
+    text-align: center;
+    float: left;
+    transition: ease-in-out 1.5s;
+    border-radius: 5px;
+        box-shadow: none;
+        background-color: aliceblue;
+    font-size: 12px;
+
+}
+
+.menuitem {
+    border: 1px solid #FF8830;
+    margin: 0.1%;
+    width: 19.8%;
+    height: 200px;
+    text-align: center;
+    float: left;
+    transition: ease-in-out 1.5s;
+    border-radius: 5px;
+        box-shadow: none;
+        background-color: #FFF;
+    font-size: 12px;
+}
+    .menuitem:hover {
+        transition: ease-in-out 0.2s;
+    box-shadow: 0px 0px 10px 0.2px #FF8830;
+
+    }
+
+.sidemenu{
+    width: 10%;
+    height: 100% !important;
+    min-height: 100% !important;
+    background-color: #F42EC2;
+    border-right:  thin solid black;
+    margin: 0px;
+    padding: 0px;
+    padding-left: 5px;
+    padding-top: 15px;
+    float: left;
+}
+
+.sidemenu div{
+    width: 80%;
+    margin:auto;
+}
+
+.sidemenu div a{
+    text-decoration: none;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+}
+
+.sidemenu div a:hover{
+    color: #FF8830;
+}
+
+.content{
+     margin: 0px;
+    padding: 0px;
+    padding-left: 5px;
+    float: left;
+    height: 100%;
+    min-height: 100% !important;
+    background-color: transparent;
+    width: 90%;
+}
+
+.foodcontainer{
+     margin: 0px;
+    padding: 0px;
+    float: left;
+    height: 100%;
+    min-height: 100% !important;
+    width: 100%;
+    background-color: white;
+    background-image: url(Images/RR_Koi.png);
+    background-size: 28%;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+
+
+#loggedinuser{
+    position: fixed;
+    right: 2%;
+    font-size:large;
+    font-weight: bolder;
+    border: 2px solid #F42EC2;
+    background-color: #F42EC2;
+    color: white;
+    border-radius: 15px;
+    margin: 15px;
+    padding-left: 5px;
+}
+
+#loggedinuser a{
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    transition: ease-in 1s;
+    text-decoration: none;
+    margin-right: -2.5px;
+    margin-top: -2px;
+    margin-bottom: -2px;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border: 1px solid transparent;
+    border-left: 1px solid black;
+    height: 100%;
+    font-weight: 100;
+}
+
+#loggedinuser a:hover{
+    background-color: #FF8830;
+    border: 1px solid #FF8830;
+    border-left: 1px solid black;
+    transition: ease-in 0.5s;
+}
+
+#loggedinuser a:focus{
+    outline: none;
+}
+
+.selectedmeal{
+    /*font-weight: bold;
+    box-shadow: 0px 0px 5px 1px rgba(40, 212, 194, 0.5) inset;
+    border-radius: 2px;*/
+}
+
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    background-image: url(Images/RR-Koi.png);
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 4;
+    width: 250px;
+    height: 150px;
+}
+
+.easytable{
+    width: 25%;
+    margin: auto;
+    font-weight: bold;
+}
+
+.userbutton {
+    background-color: #FF8830;
+    transition: ease-in-out 1s;
+    width: 100%;
+    margin:auto;
+    margin-top: 5px;
+}
+
+    .userbutton:hover {
+        background-color: #F42EC2;
+    }
+
+.searchbutton{
+    background-color: #FF8830;
+    transition: ease-in-out 1s;
+}
+
+.searchbutton:hover{
+    background-color: #F42EC2;
+}
+
+.easytable tr td button{
+    background-color: #FF8830;
+    width: 100%;
+    transition: ease-in-out 1s;
+}
+
+.easytable tr td button :hover{
+    background-color: #F42EC2;
+}
+
+.scrollarea{
+    overflow-y: scroll;
+    height: 60%;
+	background-color:white;
+	opacity:0.9;
+}
+
+.form-horizontal {
+    background-color: white;
+    opacity: 0.9;
+    /*padding:10px;
+}*/
+}
+
+table{
+    margin: auto;
+}
+
+.saveComplete{
+    position: fixed;
+    top: 38%;
+    left: 45%;
+    width: 220px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px 2px black;
+    background-color: #FF8830;
+    color: white;
+    font-weight: bolder;
+    font-size: large;
+    text-align: center;
+    transition: 2s ease-in-out;
+    transition-delay: 1s;
+}
+
+.saveCompleteFade {
+    position: fixed;
+    top: 38%;
+    left: 45%;
+    width: 220px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px 2px black;
+    background-color: #FF8830;
+    color: white;
+    font-weight: bolder;
+    font-size: large;
+    text-align: center;
+    opacity: 0;
+    transition: 2s ease-in-out;
+    transition-delay: 5s;
+}
+
+table tr td button{
+    width: 100%;
+    background-color: #FF8830;
+}
+
+footer p{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.order-menu {
+    float: left;
+    width: 20%;
+}
+
+.order-li {
+    font-size: 0.9em;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.amount {
+    font-weight: bold;
+    color: red;
+}
