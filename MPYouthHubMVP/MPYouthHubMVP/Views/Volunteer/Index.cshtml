@@ -4,9 +4,9 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>“Volunteers do not necessarily have the time; they just have the heart.</h2>
+<h2>"Volunteers do not necessarily have the time; they just have the heart."</h2>
 <br />
-<p>We currently have have @Model.Count opportunities for you to volunteer</p>
+<p>We currently have have  <span style="color: green;font-size: xx-large"> @Model.Count</span>  opportunities for you to volunteer</p>
 
 @foreach (var option in @Model)
 {   <br/>
