@@ -8,12 +8,45 @@
     @Scripts.Render("~/bundles/modernizr")
     <link rel="shortcut icon" type="image/ico" href="~/Content/Images/favicon.ico">
 </head>
+
 <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top py-5">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#" style="padding: 1px;margin:auto"> <img src="../../Images/logoforYouthHub.png" style="height:100%;width: auto;" title="mycompanylogo"></a>
+                 @Html.ActionLink("MPYouthHUB", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+
+                <ul class="nav navbar-nav">
+
+                    <li>@Html.ActionLink("IProfile", "Index", "Home")</li>
+                    <li>@Html.ActionLink("IVolunteer", "GoToVolunteer", "Home")</li>
+                    <li>@Html.ActionLink("ISkills", "GoToSkills", "Home")</li>
+                    <li>@Html.ActionLink("ICommunicate", "GoToCommunicate", "Home")</li>
+                    <li>@Html.ActionLink("IPropose", "GoToPropose", "Home")</li>
+                    <li>@Html.ActionLink("IMentor", "GoToMentor", "Home")</li>
+                    <li>@Html.ActionLink("ILoveWater", "GoToWater", "Home")</li>
+                    <li>@Html.ActionLink("IBuild", "GoToBuild", "Home")</li>
+                    <li>@Html.ActionLink("IShare", "GoToShare", "Home")</li>
+                    <li>@Html.ActionLink("IShare", "GoToProfile", "Home")</li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+
     <div class="container body-content">
         @RenderBody()
 
         <footer>
-            <p>&copy; @DateTime.Now.Year - Raging River </p>
+            <p>&copy; @DateTime.Now.Year - MPYouthHUB</p>
         </footer>
     </div>
 

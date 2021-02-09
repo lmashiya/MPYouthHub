@@ -9,7 +9,8 @@ namespace MPYouthHubMVP
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));
+                        "~/Scripts/jquery-{version}.js",
+                        "~/Scripts/jquery.jcarousel.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
@@ -23,9 +24,9 @@ namespace MPYouthHubMVP
                       "~/Scripts/bootstrap.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                     "~/Content/bootstrap.css",
-                      "~/Content/site.css",
-                      "~/Content/SimplyFreshRR.css"));
+                      "~/Content/bootstrap-lumen.css",
+                      "~/Content/site.css"));
+
         }
     }
 }
