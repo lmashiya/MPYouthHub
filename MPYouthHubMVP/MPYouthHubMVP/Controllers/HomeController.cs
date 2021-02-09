@@ -52,5 +52,10 @@ namespace MPYouthHubMVP.Controllers
         {
             throw new NotImplementedException();
         }
+
+        public ActionResult GoToProfile()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
