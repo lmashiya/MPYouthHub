@@ -81,13 +81,21 @@ namespace MPYouthHubMVP.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new AccountEntity { Password = model.ConfirmPassword, Email = model.Email };
-                var userId = _accountService.Register(user);
-                if (userId != Guid.Empty)
+                try
                 {
-                    return RedirectToAction("Index", "Home");
+                    var user = new AccountEntity { Password = model.ConfirmPassword, Email = model.Email };
+                    var userId = _accountService.Register(user);
+                    if (userId != Guid.Empty)
+                    {
+                        return RedirectToAction("Index", "Home");
+                    }
+                    AddErrors(IdentityResult.Failed());
                 }
-                AddErrors(IdentityResult.Failed());
+                catch(Exception e)
+                {
+                    var message = new string[] { e.Message };
+                    AddErrors(IdentityResult.Failed(message));
+                }
             }
 
             // If we got this far, something failed, redisplay form

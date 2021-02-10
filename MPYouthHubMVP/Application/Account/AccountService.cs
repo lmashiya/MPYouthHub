@@ -24,6 +24,10 @@ namespace Application.Account
                     accounts = JsonConvert.DeserializeObject<List<AccountEntity>>(jsonFile);
                 }
 
+                var userAccount = accounts.FirstOrDefault(x => x.Email == accountEntity.Email);
+                if (userAccount != null)
+                    throw new Exception("User already exist.");
+
                 var newAccount = new AccountEntity()
                 {
                     UserId = Guid.NewGuid(),
