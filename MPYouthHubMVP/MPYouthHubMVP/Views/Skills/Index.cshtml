@@ -20,6 +20,10 @@
     </tbody>
 
 </table>
+<br />
+<br />
+<button class="btn-block btn justify-content-center btn-success">Add Link to Skill Development</button>
+
 
 @section scripts
 {
@@ -50,7 +54,7 @@
             }
         ];
 
-        $(document).ready(function() {
+        $(document).ready(function () {
             var table = $("#clinicTable").DataTable({
                 data: clinicData,
                 columns: [
@@ -60,7 +64,7 @@
                     }, {
                         data: "link",
                         render: function (data) {
-                            return "<a href=" + data + " target='_blank'> "+data+"</a>";
+                            return "<a href=" + data + " target='_blank'> " + data + "</a>";
                         }
                     }
                 ]

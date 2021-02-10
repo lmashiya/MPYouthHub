@@ -21,6 +21,9 @@
 
 </table>
 
+<button class="btn-block btn justify-content-center btn-success">Add Communication Link</button>
+
+
 @section scripts
 {
     <script>
@@ -55,7 +58,7 @@
             }
         ];
 
-        $(document).ready(function() {
+        $(document).ready(function () {
             var table = $("#clinicTable").DataTable({
                 data: clinicData,
                 columns: [
@@ -64,7 +67,7 @@
 
                     }, {
                         data: "municipality",
-                        render: function(data) {
+                        render: function (data) {
                             return "<a href='https://municipalities.co.za/contacts/1142/bushbuckridge-local-municipality' target='_blank'> " + data + "</a>";
                         }
 
