@@ -30,7 +30,7 @@ namespace MPYouthHubMVP.Controllers
 
         public ActionResult GoToPropose()
         {
-            throw new NotImplementedException();
+            return RedirectToAction("Index", "Propose");
         }
 
         public ActionResult GoToMentor()

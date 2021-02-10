@@ -173,6 +173,7 @@
     <Compile Include="Controllers\CommunicateController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProposeController.cs" />
     <Compile Include="Controllers\SkillsController.cs" />
     <Compile Include="Controllers\VolunteerController.cs" />
     <Compile Include="Global.asax.cs">
@@ -532,6 +533,8 @@
     <Content Include="Views\Volunteer\GoToPatients.cshtml" />
     <Content Include="Views\Skills\Index.cshtml" />
     <Content Include="Views\Communicate\Index.cshtml" />
+    <Content Include="Views\Propose\Index.cshtml" />
+    <Content Include="Views\Propose\NewProposal.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
