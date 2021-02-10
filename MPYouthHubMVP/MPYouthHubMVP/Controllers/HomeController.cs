@@ -25,7 +25,7 @@ namespace MPYouthHubMVP.Controllers
 
         public ActionResult GoToCommunicate()
         {
-            throw new NotImplementedException();
+            return RedirectToAction("Index","Communicate");
         }
 
         public ActionResult GoToPropose()

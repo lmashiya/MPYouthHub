@@ -1,0 +1,78 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Get all the contacts in one place</h2>
+
+<h2><span style="color: green">“Wise men speak because they have something to say; Fools because they have to say something.”ies</span> </h2>
+<h3> List of Mpumalanga Municipalities and how to contact them</h3>
+<br />
+<table id="clinicTable" class="table table-hover table-bordered">
+    <thead>
+        <tr>
+            <th>District</th>
+            <th>Municipality</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+
+</table>
+
+@section scripts
+{
+    <script>
+        var clinicData = [
+            {
+                "district": "Ehlanzeni District",
+                "municipality": "Nkomazi Local"
+            },
+            {
+                "district": "Ehlanzeni District",
+                "municipality": "Nkomazi Local"
+            },
+            {
+                "district": "Ehlanzeni District",
+                "municipality": "City of Mbombela Local"
+            },
+            {
+                "district": "Gert Sibande District",
+                "municipality": "Chief Albert Luthuli Local"
+            },
+            {
+                "district": "Gert Sibande District",
+                "municipality": "Dipaleseng Local"
+            },
+            {
+                "district": "Nkangala District",
+                "municipality": "Emakhazeni Local"
+            },
+            {
+                "district": "Nkangala District",
+                "municipality": "Dr JS Moroka Local"
+            }
+        ];
+
+        $(document).ready(function() {
+            var table = $("#clinicTable").DataTable({
+                data: clinicData,
+                columns: [
+                    {
+                        data: "district"
+
+                    }, {
+                        data: "municipality",
+                        render: function(data) {
+                            return "<a href='https://municipalities.co.za/overview/1142/bushbuckridge-local-municipality'> " + data + "</a>";
+                        }
+
+                    }
+                ]
+            });
+        });
+    </script>
+
+}
+
