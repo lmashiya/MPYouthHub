@@ -1,0 +1,107 @@
+﻿@model  MPYouthHubMVP.Models.AccountDetailsModel
+@{
+    ViewBag.Title = "Profile";
+}
+
+<div id="home" style="margin-top: 20px">
+
+
+
+    <div class="row">
+        <div class="col-xs-12">
+            <!-- PAGE CONTENT BEGINS -->
+
+            <div>
+                <div id="user-profile-1" class="user-profile row">
+                    <div class="col-xs-12 col-sm-3" style="width: 15%;padding-left: 0px">
+                        <div>
+                            <!-- #section:pages/profile.picture -->
+                            <span class="profile-picture">
+                                <img id="avatar" class="editable img-responsive" alt="Alex's Avatar" src="../assets/avatars/profile-pic.jpg" />
+                            </span>
+
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="col-xs-12 col-sm-9" style="margin-left: -80px;">
+                        
+
+                        <div class="center">
+
+                            <h4 class="widget-title blue smaller left Header-main" style="margin-top: 0px;margin-bottom: 20px">
+                                Personal Details
+                            </h4>
+                            
+                        </div>
+
+                        <div class="space-12"></div>
+
+                        <!-- #section:pages/profile.info -->
+                        <div class="profile-user-info profile-user-info-striped" style="margin-left:0px;margin-top: 20px;">
+                            <div class="profile-info-row">
+                                <div class="profile-info-name">Date of Birth</div>
+
+                                <div class="profile-info-value">
+                                    <span class="editable" id="username">@Html.DisplayFor(m => m.FirstName)</span>
+                                </div>
+                            </div>
+
+                            <div class="profile-info-row">
+                                <div class="profile-info-name">Gender </div>
+
+                                <div class="profile-info-value">
+
+                                    <span class="editable" id="country">@Html.DisplayFor(m => m.LastName)</span>
+                                    @*<span class="editable" id="country">Netherlands</span>
+                                        <span class="editable" id="city">Amsterdam</span>*@
+                                </div>
+                            </div>
+
+                            <div class="profile-info-row">
+                                <div class="profile-info-name">Email Address</div>
+
+                                <div class="profile-info-value">
+                                    <span class="editable" id="age">@Html.DisplayFor(m => m.DateOfBirth)</span>
+                                </div>
+                            </div>
+
+                            <div class="profile-info-row">
+                                <div class="profile-info-name">Race </div>
+
+                                <div class="profile-info-value">
+                                    <span class="editable" id="signup">@Html.DisplayFor(m => m.SouthAfricanId)</span>
+                                </div>
+                            </div>
+
+
+
+                            
+
+                        </div>
+
+                        <!-- /section:pages/profile.info -->
+                        <div class="space-20"></div>
+
+
+
+
+                    </div>
+
+                    <div style="clear: both"></div>
+
+                </div>
+            </div>
+
+
+
+
+            <!-- PAGE CONTENT ENDS -->
+        </div><!-- /.col -->
+    </div><!-- /.row -->
+</div>
+
+
+

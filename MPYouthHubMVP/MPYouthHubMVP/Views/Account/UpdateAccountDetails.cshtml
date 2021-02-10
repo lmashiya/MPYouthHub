@@ -1,0 +1,186 @@
+﻿@model  MPYouthHubMVP.Models.AccountDetailsModel
+@{
+    ViewBag.Title = "Profile";
+}
+
+@using (Html.BeginForm("Home", "Profile", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <div class="group">
+        <div class="about__title" style="float: left">
+            <h2 style="margin-top: 0px;font-family: none">Personal &nbsp;<span>Information</span></h2>
+        </div>
+        <div style="clear: both; "></div>
+        <div style="border: 1px solid #005D93; border-top: 0px; margin-top: -8px"></div>
+        <div style="clear: both; padding-top: 5px"></div>
+
+        <div>
+            <br />
+
+            <div class="form-div" style="width:45%">
+                <label class="name">
+                    <span class="form-div-text" style="width: 150px">@Html.LabelFor(m => m.FirstName)</span>
+                    @Html.TextBoxFor(m => m.FirstName, new { @type = "text", @class = "InputBox", })
+                </label>
+            </div>
+            <div class="form-div" style="width:45%">
+                <label class="name">
+                    <span class="form-div-text" style="width: 150px">@Html.LabelFor(m => m.LastName)</span>
+                    @Html.TextBoxFor(m => m.LastName, new { @type = "text", @class = "InputBox", })
+                </label>
+            </div>
+
+            <div class="clearFix"></div>
+
+            <div class="form-div" style="width:45%">
+                <label class="name">
+                    <span class="form-div-text" style="width: 150px">@Html.LabelFor(m => m.DateOfBirth)</span>
+                    @Html.TextBoxFor(m => m.DateOfBirth, new { @type = "text", @class = "InputBox", })
+                </label>
+            </div>
+            <div class="form-div" style="width:45%">
+                <label class="name">
+                    <span class="form-div-text" style="width: 150px">@Html.LabelFor(m => m.SouthAfricanId)</span>
+                    @Html.TextBoxFor(m => m.SouthAfricanId, new { @type = "text", @class = "InputBox" })
+                </label>
+            </div>
+
+            <div class="clearFix"></div>
+        </div>
+    </div>
+    <div class="clearFix"></div>
+    <div class="group">
+
+        <div class="about__title" style="float: left">
+            <h2 style="margin-top: 0px;font-family: none">Street Address &nbsp;<span>Details</span></h2>
+        </div>
+        <div style="clear: both; "></div>
+        <div style="border: 1px solid #005D93; border-top: 0px; margin-top: -8px"></div>
+        <div style="clear: both; padding-top: 5px"></div>
+
+        <div>
+            <br />
+
+            <div class="form-div" style="width:45%">
+                <label class="name">
+                    <span class="form-div-text" style="width: 150px">@Html.LabelFor(m => m.HouseUnitNo)</span>
+                    @Html.TextBoxFor(m => m.HouseUnitNo, new { @type = "text", @class = "InputBox", })
+                </label>
+            </div>
+            <div class="form-div" style="width:45%">
+                <label class="name">
+                    <span class="form-div-text" style="width: 150px">@Html.LabelFor(m => m.ComplexBuildingName)</span>
+                    @Html.TextBoxFor(m => m.ComplexBuildingName, new { @type = "text", @class = "InputBox", })
+                </label>
+            </div>
+
+            <div class="clearFix"></div>
+
+            <div class="form-div" style="width:45%">
+                <label class="name">
+                    <span class="form-div-text" style="width: 150px">@Html.LabelFor(m => m.StreetName)</span>
+                    @Html.TextBoxFor(m => m.StreetName, new { @type = "text", @class = "InputBox", })
+                </label>
+            </div>
+            <div class="form-div" style="width:45%">
+                <label class="name">
+                    <span class="form-div-text" style="width: 150px">@Html.LabelFor(m => m.Suburb)</span>
+                    @Html.TextBoxFor(m => m.Suburb, new { @type = "text", @class = "InputBox" })
+                </label>
+            </div>
+
+            <div class="clearFix"></div>
+
+            <div class="form-div" style="width:45%">
+                <label class="name">
+                    <span class="form-div-text" style="width: 150px">@Html.LabelFor(m => m.TownCity)</span>
+                    @Html.TextBoxFor(m => m.TownCity, new { @type = "text", @class = "InputBox", })
+                </label>
+            </div>
+            <div class="form-div" style="width:45%">
+                <label class="name">
+                    <span class="form-div-text" style="width: 150px">@Html.LabelFor(m => m.ProvinceId)</span>
+                    @Html.TextBoxFor(m => m.ProvinceId, new { @type = "text", @class = "InputBox" })
+                </label>
+            </div>
+
+            <div class="clearFix"></div>
+        </div>
+
+
+        <div class="about__title" style="float: left">
+            <h2 style="margin-top: 0px;font-family: none">Postal Address &nbsp;<span>Details</span></h2>
+        </div>
+        <div style="clear: both; "></div>
+        <div style="border: 1px solid #005D93; border-top: 0px; margin-top: -8px"></div>
+        <div style="clear: both; padding-top: 5px"></div>
+        <div>
+            <br />
+            <div class="form-div" style="width: 45%">
+                <label class="name">
+                    <span class="form-div-text" style="width: 280px">@Html.LabelFor(m => m.BoxNumber)</span>
+                    @*<span class="form-div-text" style="width: 150px">@Html.LabelFor(m => m.Correspondence)</span>*@
+                    @Html.TextBoxFor(m => m.BoxNumber, new { @type = "text", @class = "InputBox", })
+                </label>
+            </div>
+            <div class="form-div" style="width: 45%">
+                <label class="name">
+                    <span class="form-div-text" style="width: 180px">@Html.LabelFor(m => m.PostalCity)</span>
+                    @*<div class="form-div-text" style="width: 150px">@Html.LabelFor(m => m.MethodCorrespondence)</div>*@
+                    @*@Html.TextBoxFor(m => m.MethodCorrespondence, new { @type = "text", @class = "InputBox", placeholder = "Preferred method for correspondence" })*@
+                    @Html.TextBoxFor(m => m.PostalCity, new { @type = "text", @class = "InputBox", })
+                </label>
+            </div>
+
+            <div style="clear: both; "></div>
+
+            <div class="form-div" style="width: 45%">
+                <label class="name">
+                    <span class="form-div-text" style="width: 280px">@Html.LabelFor(m => m.PostalProvinceId)</span>
+                    @*<span class="form-div-text" style="width: 150px">@Html.LabelFor(m => m.Correspondence)</span>*@
+
+                    @Html.DropDownListFor(m => m.PostalProvinceId, new SelectList(Model.Provinces, "Value", "Text"), " -- None -- ", new { @class = "InputBox" })
+
+
+                </label>
+            </div>
+            <div class="form-div" style="width: 45%">
+                <label class="name">
+                    <span class="form-div-text" style="width: 180px">@Html.LabelFor(m => m.PostalCode)</span>
+                    @*<div class="form-div-text" style="width: 150px">@Html.LabelFor(m => m.MethodCorrespondence)</div>*@
+                    @*@Html.TextBoxFor(m => m.MethodCorrespondence, new { @type = "text", @class = "InputBox", placeholder = "Preferred method for correspondence" })*@
+                    @Html.TextBoxFor(m => m.PostalCode, new { @type = "text", @class = "InputBox", })
+                </label>
+            </div>
+
+        </div>
+
+
+        <div class="clearFix"></div>
+        <div class="about__title" style="float: left">
+            <h2 style="margin-top: 0px;font-family: none">Supporting &nbsp;<span>Documents</span></h2>
+        </div>
+        <div style="clear: both; "></div>
+        <div style="border: 1px solid #005D93; border-top: 0px; margin-top: -8px"></div>
+        <div style="clear: both; padding-top: 5px"></div>
+        <div>
+            <br />
+            <div class="form-group" style="width: 45%">
+                @Html.Label("Select file:", htmlAttributes: new { @class = "control-label col-md-2", @style = "width:10%;text-align:left;" })
+                <div class="col-md-10">
+
+                    @Html.TextBox("postedFile", "", new { type = "file" })
+
+                    @*<div class="upload-btn-wrapper">
+                            <button class="btn">Browse</button>
+                            <input type="file" name="myfile"/>
+                        </div>*@
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+

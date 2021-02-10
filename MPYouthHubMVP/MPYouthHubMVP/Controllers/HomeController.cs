@@ -6,23 +6,28 @@ using System.Web.Mvc;
 
 namespace MPYouthHubMVP.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
+        
         public ActionResult Index()
         {
             return View();
         }
 
+        [HttpGet]
         public ActionResult GoToVolunteer()
         {
             return RedirectToAction("Index","Volunteer");
         }
 
+        [HttpGet]
         public ActionResult GoToSkills()
         {
             return RedirectToAction("Index","Skills");
         }
 
+        [HttpGet]
         public ActionResult GoToCommunicate()
         {
             return RedirectToAction("Index","Communicate");
