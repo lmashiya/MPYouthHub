@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "NewProposal";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>New Proposal</h2>
+<h2>New Proposal</h2>
+
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+        <label class="input-group-text" for="inputGroupSelect01">Location for proposal</label>
+    </div>
+    <select class="custom-select" id="inputGroupSelect01">
+        <option selected>Location</option>
+        <option value="1">Nkangala District</option>
+        <option value="2">Gert Sibande District</option>
+        <option value="3">Ehlanzeni District</option>
+    </select>
+</div>
+
+<textarea class="form-control form-control-lg mb-3" rows="20" placeholder="Please state your proposal"></textarea>
+<br />
+<br />
+<div style="text-align: center">
+    <button class="btn-success btn-lg"><a href=@Url.Action("Index","Propose")>Done</a></button>
+</div>
